@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename="quiz_generating_pages.css")}}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Quiz Page</title>
+</head>
+<body>
+    <nav class="bg-black text-white h-20">
+        <ul class="px-24 py-7 flex space-x-6 justify-end">
+            <a href="starting_page.html">Home</a>
+            <a href="http://">About Us</a>
+            <a href="http://">Contact Us</a>
+        </ul>
+    </nav>
+    <main>
+        <div class="text-right my-4 mx-6 text-blue-950 text-1x1">
+            <b>{{code}}</b>
+        </div>
+        <div class="text-center text-blue-950 text-2xl my-20">
+            Quiz On {{topic}}
+            <!--<span id="sub-topic"></span>--> 
+            <!--<h1>{{question}}</h1>-->
+        </div>
+        <form id="form" action="result" method="post">
+            <div class="text-blue-950 text-2xl text-left py-28">
+                Q{{question1}}
+                <br><br>
+                <input type="radio" name="ques1" id="option11">{{option11}}<br>
+                <input type="radio" name="ques1" id="option12">{{option12}}<br>
+                <input type="radio" name="ques1" id="option13">{{option13}}<br>
+                <input type="radio" name="ques1" id="option14">{{option14}}<br><br>
+                Q{{question2}}
+                <br><br>
+                <input type="radio" name="ques2" id="option21">{{option21}}<br>
+                <input type="radio" name="ques2" id="option22">{{option22}}<br>
+                <input type="radio" name="ques2" id="option23">{{option23}}<br>
+                <input type="radio" name="ques2" id="option24">{{option24}}<br><br>
+                Q{{question3}}
+                <br><br>
+                <input type="radio" name="ques3" id="option31">{{option31}}<br>
+                <input type="radio" name="ques3" id="option32">{{option32}}<br>
+                <input type="radio" name="ques3" id="option33">{{option33}}<br>
+                <input type="radio" name="ques3" id="option34">{{option34}}<br><br>
+                Q{{question4}}
+                <br><br>
+                <input type="radio" name="ques4" id="option41">{{option41}}<br>
+                <input type="radio" name="ques4" id="option42">{{option42}}<br>
+                <input type="radio" name="ques4" id="option43">{{option43}}<br>
+                <input type="radio" name="ques4" id="option44">{{option44}}<br><br>
+                Q{{question5}}
+                <br><br>
+                <input type="radio" name="ques5" id="option51">{{option51}}<br>
+                <input type="radio" name="ques5" id="option52">{{option52}}<br>
+                <input type="radio" name="ques5" id="option53">{{option53}}<br>
+                <input type="radio" name="ques5" id="option54">{{option54}}<br><br>
+                Q{{question6}}
+                <br><br>
+                <input type="radio" name="ques6" id="option61">{{option61}}<br>
+                <input type="radio" name="ques6" id="option62">{{option62}}<br>
+                <input type="radio" name="ques6" id="option63">{{option63}}<br>
+                <input type="radio" name="ques6" id="option64">{{option64}}<br><br>
+                Q{{question7}}
+                <br><br>
+                <input type="radio" name="ques7" id="option71">{{option71}}<br>
+                <input type="radio" name="ques7" id="option72">{{option72}}<br>
+                <input type="radio" name="ques7" id="option73">{{option73}}<br>
+                <input type="radio" name="ques7" id="option74">{{option74}}<br><br>
+                Q{{question8}}
+                <br><br>
+                <input type="radio" name="ques8" id="option81">{{option81}}<br>
+                <input type="radio" name="ques8" id="option82">{{option82}}<br>
+                <input type="radio" name="ques8" id="option83">{{option83}}<br>
+                <input type="radio" name="ques8" id="option84">{{option84}}<br><br>
+                Q{{question9}}
+                <br><br>
+                <input type="radio" name="ques9" id="option91">{{option91}}<br>
+                <input type="radio" name="ques9" id="option92">{{option92}}<br>
+                <input type="radio" name="ques9" id="option93">{{option93}}<br>
+                <input type="radio" name="ques9" id="option94">{{option94}}<br><br>
+                Q{{question10}}
+                <br><br>
+                <input type="radio" name="ques10" id="option101">{{option101}}<br>
+                <input type="radio" name="ques10" id="option102">{{option102}}<br>
+                <input type="radio" name="ques10" id="option103">{{option103}}<br>
+                <input type="radio" name="ques10" id="option104">{{option104}}<br><br>
+                Q{{question11}}
+                <br><br>
+                <input type="radio" name="ques11" id="option111">{{option111}}<br>
+                <input type="radio" name="ques11" id="option112">{{option112}}<br>
+                <input type="radio" name="ques11" id="option113">{{option113}}<br>
+                <input type="radio" name="ques11" id="option114">{{option114}}<br><br>
+                Q{{question12}}
+                <br><br>
+                <input type="radio" name="ques12" id="option121">{{option121}}<br>
+                <input type="radio" name="ques12" id="option122">{{option122}}<br>
+                <input type="radio" name="ques12" id="option123">{{option123}}<br>
+                <input type="radio" name="ques12" id="option124">{{option124}}<br><br>
+                Q{{question13}}
+                <br><br>
+                <input type="radio" name="ques13" id="option131">{{option131}}<br>
+                <input type="radio" name="ques13" id="option132">{{option132}}<br>
+                <input type="radio" name="ques13" id="option133">{{option133}}<br>
+                <input type="radio" name="ques13" id="option134">{{option134}}<br><br>
+                Q{{question14}}
+                <br><br>
+                <input type="radio" name="ques14" id="option141">{{option141}}<br>
+                <input type="radio" name="ques14" id="option142">{{option142}}<br>
+                <input type="radio" name="ques14" id="option143">{{option143}}<br>
+                <input type="radio" name="ques14" id="option144">{{option144}}<br><br>
+                Q{{question15}}
+                <br><br>
+                <input type="radio" name="ques15" id="option151">{{option151}}<br>
+                <input type="radio" name="ques15" id="option152">{{option152}}<br>
+                <input type="radio" name="ques15" id="option153">{{option153}}<br>
+                <input type="radio" name="ques15" id="option154">{{option154}}<br><br>
+                
+
+
+                <div class="bg-blue-900 text-center text-white rounded-3xl px-20 py-2 hover:bg-blue-800 active:bg-blue-950">
+                    <input type="submit" value="Submit Quiz">
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

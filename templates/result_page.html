@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Result Page</title>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Correct/Incorrect','No. Of Questions'],
+            ["Correct", {{piedata["Correct"]}}],
+            ["Incorrect", {{piedata["Incorrect"]}}],
+            /*{% for key, value in piedata.items() %}
+                {{key}}
+                {{value}}
+                {% if value is string %}
+                    ["{{ key }}","{{value}}"],
+                {% else %}
+                    ["{{ key }}",{{value}}],
+                {% endif %}
+            {% endfor %}*/
+          ]);
+          var options = {
+            title: 'Result Of Quiz'
+          };
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+          chart.draw(data, options);
+        }
+      </script>
+</head>
+<body>
+    <nav class="bg-black text-white h-20">
+        <ul class="px-24 py-7 flex space-x-6 justify-end">
+            <a href="{{url_for('starting_page')}}">Home</a>
+            <a href="http://">About Us</a>
+            <a href="http://">Contact Us</a>
+        </ul>
+    </nav>
+
+    <div class="text-blue-950 text-center text-3xl my-20">
+        <!--You Have Scored {{score}} Marks-->
+    </div>
+    <div id="piechart" style="width: 900px; height: 500px;" class="content-center"></div>
+</body>
+</html>

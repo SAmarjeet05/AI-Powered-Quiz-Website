@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename="topic_page.css") }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Number Of Questions</title>
+</head>
+<body>
+    <nav class="bg-black text-white h-20">
+        <ul class="px-24 py-7 flex space-x-6 justify-end">
+            <a href="{{url_for('starting_page')}}">Home</a>
+            <a href="http://">About Us</a>
+            <a href="http://">Contact Us</a>
+        </ul>
+    </nav>
+    <main>
+        <form id="form" action="quiz_generating_page" method="post">
+            <div class="text-center text-black text-2xl my-20">
+                <div class="my=20">
+                    <label for="number">How Many Question Do You Want In The Quiz</label><br><br>
+                    <select name="number" id="number" class="text-center" required>
+                        <option hidden disabled selected value> -- select an option -- </option>
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="space-x-2 text-center my-20">
+                    <input type="submit" value="Generate Quiz" class="bg-blue-900 text-white rounded-3xl px-20 py-2 hover:bg-blue-800 active:bg-blue-950">
+                </div>
+            </div>
+        </form>
+    </main>
+    <script>
+
+        /*const form = document.getElementById('form');
+        const number = document.getElementById('number');
+
+        form.addEventListener('submit',function(e) {
+            e.preventDefault();
+
+            const numbervalue = number.value;
+
+            localStorage.setItem('number', numbervalue);
+
+
+            location.href = "{{url_for('quiz_generating_page')}}";
+        })*/
+    </script>
+    
+</body>
+</html>

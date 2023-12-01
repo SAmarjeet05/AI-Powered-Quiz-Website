@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename="topic_page.css")}}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <title>Enter Code page</title>
+</head>
+<body>
+    <nav class="bg-black text-white h-20">
+        <ul class="px-24 py-7 flex space-x-6 justify-end">
+            <a href="{{url_for('starting_page')}}">Home</a>
+            <a href="http://">About Us</a>
+            <a href="http://">Contact Us</a>
+        </ul>
+    </nav>
+    <main>
+        <form id="form" action="code_quiz_page" method="post">
+            <div class="text-center text-black text-2xl">
+                <div class="my-20">
+                    <label for="topic">Enter Quiz Code</label><br><br>
+                    <input type="text" id="code_value" name="code_value" class="text-center" placeholder="Enter Quiz Code" required>
+                </div>
+                <div class="my-20">
+                    <label for="topic">Enter Your Name</label><br><br>
+                    <input type="text" id="fname" name="fname" class="text-center" placeholder="Enter Your Name" required>
+                </div>
+                <div class="space-x-2 text-center">
+                    <input type="submit" value="Proceed Furthur" class="bg-blue-900 text-white rounded-3xl px-20 py-2 hover:bg-blue-800 active:bg-blue-950">
+                </div>
+            </div>
+        </form>
+    </main>
+    
+</body>
+</html>
